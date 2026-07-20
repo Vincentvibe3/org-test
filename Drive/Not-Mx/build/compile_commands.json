@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe  @CMakeFiles/cobs-test.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\cobs-test.dir\\test\\test.c.obj -c C:\\Users\\Vincent\\Documents\\Programming\\Projects\\McGillRobotics\\rover-embedded-2025\\cobs\\cobs-c\\test\\test.c",
+  "file": "C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/test/test.c",
+  "output": "CMakeFiles/cobs-test.dir/test/test.c.obj"
+},
+{
+  "directory": "C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe  @CMakeFiles/cobs-test.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\cobs-test.dir\\src\\cobs.c.obj -c C:\\Users\\Vincent\\Documents\\Programming\\Projects\\McGillRobotics\\rover-embedded-2025\\cobs\\cobs-c\\src\\cobs.c",
+  "file": "C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/src/cobs.c",
+  "output": "CMakeFiles/cobs-test.dir/src/cobs.c.obj"
+},
+{
+  "directory": "C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/build/src",
+  "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe  @CMakeFiles/cobs-c.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\cobs-c.dir\\cobs.c.obj -c C:\\Users\\Vincent\\Documents\\Programming\\Projects\\McGillRobotics\\rover-embedded-2025\\cobs\\cobs-c\\src\\cobs.c",
+  "file": "C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/src/cobs.c",
+  "output": "src/CMakeFiles/cobs-c.dir/cobs.c.obj"
+}
+]

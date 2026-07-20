@@ -1,0 +1,6 @@
+C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/build/CMakeFiles/cobs-test.dir
+C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/build/CMakeFiles/edit_cache.dir
+C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/build/src/CMakeFiles/cobs-c.dir
+C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/build/src/CMakeFiles/edit_cache.dir
+C:/Users/Vincent/Documents/Programming/Projects/McGillRobotics/rover-embedded-2025/cobs/cobs-c/build/src/CMakeFiles/rebuild_cache.dir
