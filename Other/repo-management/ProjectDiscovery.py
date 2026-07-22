@@ -8,8 +8,12 @@ import shutil
 if len(sys.argv) < 2:
 	print("No directory to scan was provided")
 	exit(1)
+if len(sys.argv) < 3:
+	print("No runner container image was provided")
+	exit(1)
 
 dir_to_search = pathlib.Path(sys.argv[1])
+container_image = sys.argv[2]
 def find_mx_projects(repo_path:pathlib.Path) -> list[pathlib.Path]:
 	projects = []
 	res = glob.glob("**/**.ioc", root_dir=repo_path, recursive=True)
@@ -74,7 +78,7 @@ for project_path in cmake_projects:
 		oci_runtime = "docker"
 	command = [
 		oci_runtime, "run", "--rm",
-		"-v", f"{repo_path}:/home/ci-runner/project:z", "ci-runner:latest", 
+		"-v", f"{repo_path}:/home/ci-runner/project:z", container_image, 
 		str(project_path)
 	]
 	if str(repo_path.joinpath(project_path).resolve()) in mx_projects_resolved:
