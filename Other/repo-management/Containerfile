@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install -y \
 	python3 \
 	cmake \
 	gcc-arm-none-eabi \
+	gcc \ 
+	g++ \
 	git \
 	ninja-build \
 	wget \
@@ -22,8 +24,8 @@ COPY build.sh /home/ci-runner/build.sh
 
 RUN chmod +x /home/ci-runner/build.sh
 
-VOLUME ["/home/ci-runner"]
+VOLUME ["/home/ci-runner/project"]
 
-WORKDIR /home/ci-runner
+WORKDIR /home/ci-runner/project
 
-CMD ["./build.sh", "./project"]
+ENTRYPOINT [ "../build.sh" ]

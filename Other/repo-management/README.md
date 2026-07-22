@@ -4,8 +4,10 @@ Scripts and automation for running CI and other automation to manager this repos
 
 ## ProjectDiscovery.py
 
-A simple script to discover STM32CubeMX projects using CMake for builds.
-It outputs each of the folders on a separate line to `stdout`.
+This script discovers CMake projets in a directory recursively and builds them.
+Builds use gcc-arm-none-eabi for STM32CubeMX projects and standard gcc for libraries
+that are not generated using STM32CubeMX. If any build fails, it exits with a non-zero
+exit code. To use it, use `python ProjectDiscovery.py <directory>`
 
 ## build.sh
 
@@ -27,6 +29,10 @@ Here is a brief description of the packages installed in the container.
 
 `gcc-arm-none-eabi` : Cross compiling toolchain used for our embedded builds.
 
+`gcc` : To compile libraries that don't directly generate an embedded target binary.
+
+`g++` : To compile libraries that don't directly generate an embedded target binary.
+
 `git` : To pull submodules and other git operation that might be done in the 
 cmake configuration stage.
 
@@ -40,4 +46,4 @@ cmake configuration stage.
 
 `bash` : To run the `build.sh` script.
 
-`libnewlib-dev` : Our embedded firmware for STM32 relies on newlib.
+`libnewlib-dev` : C standard library implementation needed for the embedded targets.
