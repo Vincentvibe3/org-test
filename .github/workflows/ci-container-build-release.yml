@@ -32,7 +32,7 @@ jobs:
       run: cd ./Other/repo-management
 
     - name: Build docker image
-      run: docker build . -f Containerfile -t ghcr.io/Vincentvibe3/rover-embedded-runner:latest -t ghcr.io/Vincentvibe3/rover-embedded-runner:$SHORT_SHA
+      run: docker build . -f Containerfile -t ghcr.io/vincentvibe3/rover-embedded-runner:latest -t ghcr.io/vincentvibe3/rover-embedded-runner:$SHORT_SHA
 
     - name: Push docker image
-      run: docker push -f Containerfile -t ghcr.io/Vincentvibe3/rover-embedded-runner:latest -t ghcr.io/Vincentvibe3/rover-embedded-runner:$SHORT_SHA
+      run: docker push -f Containerfile -t ghcr.io/vincentvibe3/rover-embedded-runner:latest -t ghcr.io/vincentvibe3/rover-embedded-runner:$SHORT_SHA
