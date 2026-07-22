@@ -1,6 +1,7 @@
 FROM docker.io/ubuntu:26.04
 
 LABEL org.opencontainers.image.source=https://github.com/Vincentvibe3/org-test
+LABEL org.opencontainers.image.description="Build environment for CMake projects"
 
 # Install scripting tools, compilers and toolchains for building
 # our embedded projects and other tooling
