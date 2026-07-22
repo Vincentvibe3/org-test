@@ -1,14 +1,14 @@
-from sepolgen.objectmodel import dir_to_str
-
 import glob
 import pathlib
 import subprocess
 import re
 import sys
+import shutil
 
 if len(sys.argv) < 2:
 	print("No directory to scan was provided")
 	exit(1)
+
 dir_to_search = pathlib.Path(sys.argv[1])
 def find_mx_projects(repo_path:pathlib.Path) -> list[pathlib.Path]:
 	projects = []
@@ -69,8 +69,11 @@ for project_path in cmake_projects:
 	print("-"*75)
 	print()
 
+	oci_runtime = "podman"
+	if shutil.which("podman") is None:
+		oci_runtime = "docker"
 	command = [
-		"podman", "run", 
+		oci_runtime, "run", "--rm",
 		"-v", f"{repo_path}:/home/ci-runner/project:z", "ci-runner:latest", 
 		str(project_path)
 	]
