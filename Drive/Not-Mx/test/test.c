@@ -24,7 +24,7 @@ int main(){
 	for (int i=0;i<5;i++){
 		int slen = strlen(test1);
 		printf("estimate: %d \n", cobs_estimate_encoded_size(slen));
-		int len = cobs_encode(test1, slen, write_head, estimate_encoded_size(slen), 'a');
+		int len = cobs_encode(test1, slen, write_head, cobs_estimate_encoded_size(slen), 'a');
 		printf("Wrote %d \n", len);
 		printf("delim %c\n", *(write_head+len-1));
 		write_head+=len;
