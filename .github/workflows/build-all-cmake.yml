@@ -18,9 +18,9 @@ jobs:
     - uses: actions/setup-python@v7
       with:
         python-version: '3.14' 
-        
-    - name: Install Podman
-      run: sudo apt-get update && sudo apt-get -y install podman
+
+    - name: Get image
+      run: docker pull ghcr.io/vincentvibe3/rover-embedded-runner:latest
 
     - name: Find and build targets
-      run: python3 ./Other/repo-management/ProjectDiscovery.py
+      run: python3 ./Other/repo-management/ProjectDiscovery.py . ghcr.io/vincentvibe3/rover-embedded-runner:latest
