@@ -13,21 +13,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     
     - name: Get short commit hash
       run  : echo "SHORT_SHA=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
       
     - name: Login to GitHub Container Registry
-      uses: docker/login-action@v2
+      uses: docker/login-action@v4
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Build docker image
+    - name: Build container image
       working-directory: ./Other/repo-management
       run: docker build . -f Containerfile -t ghcr.io/vincentvibe3/rover-embedded-runner:latest -t ghcr.io/vincentvibe3/rover-embedded-runner:$SHORT_SHA
 
-    - name: Push docker image
-      run: docker push -t ghcr.io/vincentvibe3/rover-embedded-runner:latest -t ghcr.io/vincentvibe3/rover-embedded-runner:$SHORT_SHA
+    - name: Push container image as latest
+      run: docker push ghcr.io/vincentvibe3/rover-embedded-runner:latest
+
+    - name : Push container image as sha
+      run: docker push ghcr.io/vincentvibe3/rover-embedded-runner:$SHORT_SHA
