@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 enable_language(C CXX ASM)
 include(${CMAKE_CURRENT_SOURCE_DIR}/../../../Other/cmake/version-checker.cmake)
 
-set_lib_info("TransitiveLibTest" 0.5.0-alpha)
+set_lib_info("TransitiveLibTest" 0.6.0-alpha)
 
 set(LIB_SRC
   ${CMAKE_CURRENT_SOURCE_DIR}/libfile3.c
