@@ -21,7 +21,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "libfile.h"
+#include "libfile2.h"
+#include "libfile3.h"
+#include "libfile4.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -85,6 +88,10 @@ int main(void)
 
   /* Initialize all configured peripherals */
   /* USER CODE BEGIN 2 */
+  foo();
+  foo2();
+  foo3();
+  bar();
 
   /* USER CODE END 2 */
 

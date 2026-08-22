@@ -37,6 +37,12 @@ add_executable(${CMAKE_PROJECT_NAME})
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
 
+include(${CMAKE_CURRENT_SOURCE_DIR}/../../Other/cmake/version-checker.cmake)
+
+use_lib(src 1.2.0 EXACT)
+use_lib(src2 1.1.3 APPROX)
+use_lib(../Nested/Test5/src 1.4.0 EXACT "${CMAKE_CURRENT_BINARY_DIR}/LibTest3_build")
+
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined library search paths
@@ -63,6 +69,8 @@ list(REMOVE_ITEM CMAKE_C_IMPLICIT_LINK_LIBRARIES ob)
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
-
+    libtest
+    libtest2
+    LibTest3
     # Add user defined libraries
 )
